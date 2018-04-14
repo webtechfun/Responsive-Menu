@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+	<meta name="viewport" content="width=device-width">
+	<style type="text/css">
+		
+		*{margin:0;padding: 0;}
+
+		html,body{font-family: 'Roboto', sans-serif;margin: 0;padding: 0;}
+
+		nav{background: #000;color: #fff;padding: 20px 5%;}
+
+		nav ul{float: right;}
+
+		nav ul li{list-style: none;padding: 10px;float: left; margin:0 10px;cursor: pointer;}
+		nav ul li:hover{color: silver}
+
+		.logo{display: inline-block;float: left;}
+
+		
+		.hamburger{transition :0.5s;float: right;display: none}
+
+		.hamburger p {width: 45px;height: 4px;background: #fff;margin-bottom: 10px;}
+		.hamburger p:last-child {margin-bottom: 0;}
+		
+		.hamburger.active p:first-child{visibility: hidden;}
+		.hamburger.active p:last-child{ transform: rotate(90deg) translateX(-14px); }
+		.hamburger.active{transform: rotate(135deg);}
+
+		@media(max-width: 992px){
+			.hamburger{display: block;}
+			nav ul{display: none;}
+
+		}
+
+	</style>
+</head>
+<body>
+<nav>
+
+	<div class="logo">
+		<h1>Logo</h1>
+	</div>
+
+	<div class="hamburger">
+		<p></p>
+		<p></p>
+		<p></p>
+	</div>
+
+
+
+	<ul>
+		<li>Home</li>
+		<li>About Us</li>
+		<li>Contact Us</li>
+	</ul>
+
+	<div style="clear:both"></div>
+
+</nav>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		console.log('doc is ready');
+		$('.hamburger').click(function(){
+			$('.hamburger').toggleClass('active');
+		})			
+	})
+
+</script>
+
+
+</body>
+</html>
