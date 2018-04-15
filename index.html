@@ -3,66 +3,50 @@
 <head>
 	<title></title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
 	<meta name="viewport" content="width=device-width">
 	<style type="text/css">
-		
-		*{margin:0;padding: 0;}
 
-		html,body{font-family: 'Roboto', sans-serif;margin: 0;padding: 0;}
+		*{margin:0;padding:0;box-sizing:border-box}
+		body,html{font-family:Roboto,sans-serif;width:100%;height:100%}
+		nav{background:#000;color:#fff;padding:15px 5%;width:100%}
+		nav ul{float:right}
+		nav ul li{list-style:none;padding:5px 10px;float:left;margin:0 10px;cursor:pointer}
+		nav ul li:hover{color:silver}
+		.logo{display:inline-block;float:left}
+		.hamburger{transition:.5s;float:right;display:none}
+		.hamburger p{width:35px;height:3px;background:#fff;margin-bottom:8px}
+		.hamburger p:last-child{margin-bottom:0}
+		.hamburger.active p:first-child{visibility:hidden}
+		.hamburger.active p:last-child{transform:rotate(90deg) translateX(-11px)}
+		.hamburger.active{transform:rotate(135deg)}
+		.hamburger.active+ul{transform:translateX(0)}
 
-		nav{background: #000;color: #fff;padding: 20px 5%;}
+		@media(max-width:992px){
 
-		nav ul{float: right;}
-
-		nav ul li{list-style: none;padding: 10px;float: left; margin:0 10px;cursor: pointer;}
-		nav ul li:hover{color: silver}
-
-		.logo{display: inline-block;float: left;}
-
-		
-		.hamburger{transition :0.5s;float: right;display: none}
-
-		.hamburger p {width: 45px;height: 4px;background: #fff;margin-bottom: 10px;}
-		.hamburger p:last-child {margin-bottom: 0;}
-		
-		.hamburger.active p:first-child{visibility: hidden;}
-		.hamburger.active p:last-child{ transform: rotate(90deg) translateX(-14px); }
-		.hamburger.active{transform: rotate(135deg);}
-
-		@media(max-width: 992px){
-			.hamburger{display: block;}
-			nav ul{display: none;}
-
+			.hamburger{display:block}
+			nav ul{width:100%;height:100%;padding:60px 5% 5%;position:absolute;top:0;left:0;background:#000;transform:translateX(-100%);transition:.4s;z-index:-1}
+			nav ul li{width:100%;padding:10px 0;margin:0}
 		}
-
 	</style>
 </head>
 <body>
-<nav>
+	<nav>
 
-	<div class="logo">
-		<h1>Logo</h1>
-	</div>
-
-	<div class="hamburger">
-		<p></p>
-		<p></p>
-		<p></p>
-	</div>
-
-
-
-	<ul>
-		<li>Home</li>
-		<li>About Us</li>
-		<li>Contact Us</li>
-	</ul>
-
-	<div style="clear:both"></div>
-
-</nav>
-
+		<div class="logo">
+			<h1>Logo</h1>
+		</div>
+		<div class="hamburger">
+			<p></p>
+			<p></p>
+			<p></p>
+		</div>
+		<ul>
+			<li>Home</li>
+			<li>About Us</li>
+			<li>Contact Us</li>
+		</ul>
+		<div style="clear:both"></div>
+	</nav>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script type="text/javascript">
@@ -75,7 +59,5 @@
 	})
 
 </script>
-
-
 </body>
 </html>
