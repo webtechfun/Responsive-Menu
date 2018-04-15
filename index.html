@@ -8,7 +8,7 @@
 
 		*{margin:0;padding:0;box-sizing:border-box}
 		body,html{font-family:Roboto,sans-serif;width:100%;height:100%}
-		nav{background:#000;color:#fff;padding:15px 5%;width:100%}
+		nav{background:#000;color:#fff;padding:15px 5%;width:100%;border-bottom: 1px solid #424242;}
 		nav ul{float:right}
 		nav ul li{list-style:none;padding:5px 10px;float:left;margin:0 10px;cursor:pointer}
 		nav ul li:hover{color:silver}
@@ -24,14 +24,13 @@
 		@media(max-width:992px){
 
 			.hamburger{display:block}
-			nav ul{width:100%;height:100%;padding:60px 5% 5%;position:absolute;top:0;left:0;background:#000;transform:translateX(-100%);transition:.4s;z-index:-1}
+			nav ul{transition:.4s;width:100%;height:100%;padding:70px 5% 5%;position:absolute;top:0;left:0;background:#000;transform:translateX(-100%);z-index:-1}
 			nav ul li{width:100%;padding:10px 0;margin:0}
 		}
 	</style>
 </head>
 <body>
 	<nav>
-
 		<div class="logo">
 			<h1>Logo</h1>
 		</div>
